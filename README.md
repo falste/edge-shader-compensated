@@ -11,13 +11,13 @@ The project is updated for Unity3D 2020.3.30f1.
 
 # Examples
 The usual method of detecting and highlighting edges by comparing the normals and depth of each pixel with those of its neighboring pixels. As the viewing angle gets more shallow, the depth difference between pixels becomes too big and the pixels are incorrectly detected as edges:
-![Usual method of edge detection by comparing normals and depth with neighboring pixels. As the viewing angle gets more shallow, the depth difference between pixels becomes too big and the pixels are incorrectly detected as edges](exampleimages/example03.png?raw=true)
+![Usual method of edge detection by comparing normals and depth with neighboring pixels. As the viewing angle gets more shallow, the depth difference between pixels becomes too big and the pixels are incorrectly detected as edges](Media/example03.png?raw=true)
 
 Active compensation for shallow viewing angles. As is visible at the bottom of the cable drum in the bottom left, some depth-based edges are missed due to the selected sensitivity:
-![Working edge detection, which misses some depth-based edges](exampleimages/example01.png?raw=true)
+![Working edge detection, which misses some depth-based edges](Media/example01.png?raw=true)
 
 Increasing sensitiviy of the depth-based edge detection to also draw the missing edges, which creates artifacts due to the low resolution of the depth data:
-![More sensitive depth-based edge-detection, which creates artifacts](exampleimages/example02.png?raw=true)
+![More sensitive depth-based edge-detection, which creates artifacts](Media/example02.png?raw=true)
 
 # How to use
 - Create a scene with some objects.
