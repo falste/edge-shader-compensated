@@ -16,7 +16,7 @@ The usual method of detecting and highlighting edges by comparing the normals an
 Active compensation for shallow viewing angles. As is visible at the bottom of the cable drum in the bottom left, some depth-based edges are missed due to the selected sensitivity:
 ![Working edge detection, which misses some depth-based edges](Media/example01.png?raw=true)
 
-Increasing sensitiviy of the depth-based edge detection to also draw the missing edges, which creates artifacts due to the low resolution of the depth data:
+Increasing sensitivity of the depth-based edge detection to also draw the missing edges, which creates artifacts due to the low resolution of the depth data:
 ![More sensitive depth-based edge-detection, which creates artifacts](Media/example02.png?raw=true)
 
 # How to use
