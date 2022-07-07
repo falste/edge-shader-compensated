@@ -7,22 +7,22 @@ using UnityEngine;
 [ImageEffectAllowedInSceneView]
 public class ImageEffectScript : MonoBehaviour {
 
-	public Material imageEffectMaterial;
+    public Material imageEffectMaterial;
 
-	Camera cam;
+    Camera cam;
 
-	void OnRenderImage(RenderTexture src, RenderTexture dest) {
-		if (imageEffectMaterial == null) {
-			return;
+    void OnRenderImage(RenderTexture src, RenderTexture dest) {
+        if (imageEffectMaterial == null) {
+            return;
         }
 
-		if (cam == null) {
-			cam = GetComponent<Camera>();
-			cam.depthTextureMode |= DepthTextureMode.DepthNormals;
-			imageEffectMaterial.SetFloat("_vFOV", cam.fieldOfView);
-			imageEffectMaterial.SetFloat("_hFOV", Camera.VerticalToHorizontalFieldOfView(cam.fieldOfView, cam.aspect));
-		}
+        if (cam == null) {
+            cam = GetComponent<Camera>();
+            cam.depthTextureMode |= DepthTextureMode.DepthNormals;
+            imageEffectMaterial.SetFloat("_vFOV", cam.fieldOfView);
+            imageEffectMaterial.SetFloat("_hFOV", Camera.VerticalToHorizontalFieldOfView(cam.fieldOfView, cam.aspect));
+        }
 
-		Graphics.Blit(src, dest, imageEffectMaterial);
-	}
+        Graphics.Blit(src, dest, imageEffectMaterial);
+    }
 }
